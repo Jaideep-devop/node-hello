@@ -5,8 +5,7 @@
 
 trigger:
 - master
-agent:
-- jaideep_hosting
+
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
