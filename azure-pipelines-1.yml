@@ -12,10 +12,10 @@ variables:
   azureSubscription: '0a916efe-c0a6-4fe2-9440-1433a209217e'
 
   # Web app name
-  webAppName: 'web32'
+  webAppName: 'web42'
 
   # Environment name
-  environmentName: 'web32'
+  environmentName: 'web42'
 
   # Agent VM image name
   Default
@@ -48,7 +48,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: web32'
+            displayName: 'Azure Web App Deploy: web42'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
