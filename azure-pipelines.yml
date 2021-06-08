@@ -20,3 +20,11 @@ steps:
    npm -v
    npm run build
   displayName: 'npm install and build'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure for Students(865bcc00-2a24-4188-b8c4-2d968f54d241)'
+    appType: 'webApp'
+    WebAppName: 'web51'
+    VirtualApplication: 'webapp'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
