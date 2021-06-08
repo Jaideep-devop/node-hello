@@ -17,9 +17,6 @@ variables:
   # Environment name
   environmentName: 'web42'
 
-  # Agent VM image name
-  Default
-
 stages:
 - stage: Build
   displayName: Build stage
