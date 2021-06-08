@@ -20,10 +20,8 @@ variables:
   # Agent VM image name
   Default
 
-- stage: Deploy
+ stage: Deploy
   displayName: Deploy stage
-  dependsOn: Build
-  condition: succeeded()
   jobs:
   - deployment: Deploy
     displayName: Deploy
