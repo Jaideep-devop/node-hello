@@ -14,7 +14,7 @@ variables:
   # Web app name
 
   # Environment name
-  environmentName: $(webAppName)
+  
 
 stages:
 - stage: Build
@@ -56,7 +56,7 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy
-    environment: $(environmentName)
+    environment: $(webAppName)
     pool:
       Default
     strategy:
