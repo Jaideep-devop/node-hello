@@ -12,8 +12,8 @@ variables:
   azureSubscription: '5d9fd15b-3a79-42f3-a547-35537f5a1399'
 
   # Web app name
-    webAppName: web32
-    
+  webAppName: web32
+
   # Environment name
   environmentName: web32
 
