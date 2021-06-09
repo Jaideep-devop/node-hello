@@ -12,10 +12,9 @@ variables:
   azureSubscription: '5d9fd15b-3a79-42f3-a547-35537f5a1399'
 
   # Web app name
-  webAppName: 'web42'
 
   # Environment name
-  environmentName: 'web42'
+  environmentName: $(webAppName)
 
 stages:
 - stage: Build
