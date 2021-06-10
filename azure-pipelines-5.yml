@@ -30,6 +30,12 @@ stages:
       Default
 
     steps:
+    - task: AzureKeyVault@2
+      inputs:
+        azureSubscription: 'Azure for Students (865bcc00-2a24-4188-b8c4-2d968f54d241)'
+        KeyVaultName: 'key42'
+        SecretsFilter: '*'
+        RunAsPreJob: false
     - task: NodeTool@0
       inputs:
         versionSpec: '14.x'
