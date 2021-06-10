@@ -49,7 +49,7 @@ stages:
 
     - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
       artifact: drop
-    
+
 - stage: Deploy
   displayName: Deploy stage
   dependsOn: Build
@@ -64,6 +64,12 @@ stages:
       runOnce:
         deploy:
           steps:
+          - task: AzureKeyVault@2
+            inputs:
+              azureSubscription: 'Azure for Students (865bcc00-2a24-4188-b8c4-2d968f54d241)'
+              KeyVaultName: 'key42'
+              SecretsFilter: '*'
+              RunAsPreJob: false
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: web42'
             inputs:
